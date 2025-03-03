@@ -29,6 +29,12 @@ wget "https://s3.amazonaws.com/openneuro.org/ds004212/derivatives/preprocessed/p
 wget "https://s3.amazonaws.com/openneuro.org/ds004212/derivatives/preprocessed/preprocessed_P3-epo-3.fif?versionId=LadUGeGvC.s2wAqYEMXEzD4_VjD1aRJg"
 wget "https://s3.amazonaws.com/openneuro.org/ds004212/derivatives/preprocessed/preprocessed_P3-epo.fif?versionId=oaTbATaOOvX.UtsD5gA9ET7RJoZljTsB" 
 
+
+# rename .fif files
+for file in preprocessed_P*-epo*.fif\?versionId=*; do
+    mv "$file" "${file%%\?versionId=*}"
+done
+
 cd ..
 
 w3m -O images_meg.zip "https://osf.io/download/rdxy2/" 
