@@ -31,7 +31,7 @@ wget "https://s3.amazonaws.com/openneuro.org/ds004212/derivatives/preprocessed/p
 
 cd ..
 
-w3m images_meg.zip "https://osf.io/download/rdxy2/" 
+w3m -O images_meg.zip "https://osf.io/download/rdxy2/" 
 unzip _image_database_things.zip 
 # Password for things_images.zip: things4all
 
