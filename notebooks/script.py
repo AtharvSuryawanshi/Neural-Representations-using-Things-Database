@@ -257,7 +257,6 @@ def consensus_nmf_W(X, n_components=5, n_replicates=10, p=0.3, tau=0.1, random_s
         for i in range(nos):
             for j in range(i + 1, nos):  # Ensure each pair is only considered once
                 corr = np.corrcoef(cluster_rows[i], cluster_rows[j])[0, 1]
-                print(corr)
                 correlations.append(corr)
 
         # Compute mean of pairwise correlations
@@ -296,7 +295,7 @@ n_participants = 4 # total number of participants
 participant_nos = [0, 2] # participant number 0 - 3
 images_to_show = 20
 nmf_components = 25
-random_state = 0
+random_state = 1
 nos_seeds = 20
 BAYESIAN = True
 
